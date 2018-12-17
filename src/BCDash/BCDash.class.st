@@ -1,9 +1,10 @@
 Class {
 	#name : #BCDash,
-	#superclass : #Object,
+	#superclass : #WAComponent,
 	#instVars : [
 		'a',
-		'b'
+		'b',
+		'count'
 	],
 	#category : #BCDash
 }
@@ -16,4 +17,17 @@ BCDash >> a [
 { #category : #accessing }
 BCDash >> b [
 	^b
+]
+
+{ #category : #accessing }
+BCDash >> initialize [
+	super initialize.
+	count := 0
+
+]
+
+{ #category : #accessing }
+BCDash >> renderContentOn: html [
+	html heading: count
+
 ]
