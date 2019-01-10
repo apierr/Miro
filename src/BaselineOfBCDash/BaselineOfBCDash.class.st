@@ -12,7 +12,7 @@ BaselineOfBCDash >> baseline: spec [
 		do: [ 
 			spec baseline: 'Seaside3' with: [ spec repository: 'github://SeasideSt/Seaside/repository' ] .
 			spec baseline: 'MaterialDesignLite' with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ] .
+			spec baseline: 'ChartJs' with: [ spec repository: 'github://DuneSt/ChartJs:v1.x.x/src' ].
 			spec package: #BCDash with: [ spec requires: #('Seaside3' 'MaterialDesignLite') ]
-			 ] 
-
+			 ]
 ]
