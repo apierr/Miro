@@ -13,6 +13,6 @@
 ```smalltalk
     (WAAdmin register: self asApplicationAt: 'myApplication')
         addLibrary: JQDeploymentLibrary;
-		addLibrary: ChartJsLibrary;
+	addLibrary: ChartJsLibrary;
         addLibrary: MDLLibrary
 ```
