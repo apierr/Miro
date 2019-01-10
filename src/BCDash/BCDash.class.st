@@ -10,16 +10,6 @@ Class {
 }
 
 { #category : #accessing }
-BCDash >> a [
-	^a
-]
-
-{ #category : #accessing }
-BCDash >> b [
-	^b
-]
-
-{ #category : #accessing }
 BCDash >> initialize [
 	super initialize.
 	count := 0
