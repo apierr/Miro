@@ -24,15 +24,16 @@ BCDash class >> initializeAs: aString [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 BCDash >> initialize [
 	super initialize.
 	count := 0
 
 ]
 
-{ #category : #accessing }
+{ #category : #rendering }
 BCDash >> renderContentOn: html [
-	html render: (ChartJsComponent data: (Chart2dData xObjects: (1 to: 10) function: [ :x | x / 2 * (x + 1) ]))
-
+		html render: ChartDemo new.
+		html render: SliderDemo new.
+		html render: ButtonDemo new.
 ]
