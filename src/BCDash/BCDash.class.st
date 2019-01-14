@@ -37,3 +37,17 @@ BCDash >> renderContentOn: html [
 		html render: SliderDemo new.
 		html render: ButtonDemo new.
 ]
+
+{ #category : #rendering }
+BCDash >> style [ 
+	^ '.mdl-pagination__current{
+        box-shadow: inset 0px -4px 0px 0px #FFC107 !important;
+    }'
+]
+
+{ #category : #updating }
+BCDash >> updateRoot: anHtmlRoot [
+	    super updateRoot: anHtmlRoot.
+	    anHtmlRoot beHtml5.
+	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.brown-red.min.css').
+]
