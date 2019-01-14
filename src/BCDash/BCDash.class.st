@@ -16,7 +16,6 @@ BCDash class >> initialize [
 
 { #category : #initialization }
 BCDash class >> initializeAs: aString [
-	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
 	^ (WAAdmin register: self asApplicationAt: aString)
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary;
