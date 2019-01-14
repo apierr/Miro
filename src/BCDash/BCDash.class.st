@@ -33,6 +33,6 @@ BCDash >> initialize [
 
 { #category : #accessing }
 BCDash >> renderContentOn: html [
-	html heading: count
+	html render: (ChartJsComponent data: (Chart2dData xObjects: (1 to: 10) function: [ :x | x / 2 * (x + 1) ]))
 
 ]
