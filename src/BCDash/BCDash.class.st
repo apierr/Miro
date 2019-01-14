@@ -16,7 +16,6 @@ BCDash class >> initialize [
 
 { #category : #initialization }
 BCDash class >> initializeAs: aString [
-	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
 	^ (WAAdmin register: self asApplicationAt: aString)
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary;
@@ -24,15 +23,30 @@ BCDash class >> initializeAs: aString [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 BCDash >> initialize [
 	super initialize.
 	count := 0
 
 ]
 
-{ #category : #accessing }
+{ #category : #rendering }
 BCDash >> renderContentOn: html [
-	html render: (ChartJsComponent data: (Chart2dData xObjects: (1 to: 10) function: [ :x | x / 2 * (x + 1) ]))
+		html render: ChartDemo new.
+		html render: SliderDemo new.
+		html render: ButtonDemo new.
+]
 
+{ #category : #rendering }
+BCDash >> style [ 
+	^ '.mdl-pagination__current{
+        box-shadow: inset 0px -4px 0px 0px #FFC107 !important;
+    }'
+]
+
+{ #category : #updating }
+BCDash >> updateRoot: anHtmlRoot [
+	    super updateRoot: anHtmlRoot.
+	    anHtmlRoot beHtml5.
+	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.brown-red.min.css').
 ]
