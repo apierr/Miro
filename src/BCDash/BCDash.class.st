@@ -6,7 +6,7 @@ Class {
 		'b',
 		'count'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #'class initialization' }
