@@ -35,6 +35,7 @@ BCDash >> renderContentOn: html [
 		html render: ChartDemo new.
 		html render: SliderDemo new.
 		html render: ButtonDemo new.
+		html render: MyContactAddress new.
 ]
 
 { #category : #rendering }
