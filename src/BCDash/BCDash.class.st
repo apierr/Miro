@@ -6,7 +6,7 @@ Class {
 		'b',
 		'count'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #'class initialization' }
@@ -35,6 +35,7 @@ BCDash >> renderContentOn: html [
 		html render: ChartDemo new.
 		html render: SliderDemo new.
 		html render: ButtonDemo new.
+		html render: MyContactAddress new.
 ]
 
 { #category : #rendering }

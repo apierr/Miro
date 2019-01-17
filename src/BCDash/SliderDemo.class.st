@@ -1,7 +1,7 @@
 Class {
 	#name : #SliderDemo,
 	#superclass : #WAComponent,
-	#category : #BCDash
+	#category : #'BCDash-MDL'
 }
 
 { #category : #rendering }

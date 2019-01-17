@@ -1,7 +1,7 @@
 Class {
 	#name : #ChartDemo,
 	#superclass : #WAComponent,
-	#category : #BCDash
+	#category : #'BCDash-Chart'
 }
 
 { #category : #rendering }

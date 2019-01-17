@@ -1,7 +1,7 @@
 Class {
 	#name : #ButtonDemo,
 	#superclass : #WAComponent,
-	#category : #BCDash
+	#category : #'BCDash-MDL'
 }
 
 { #category : #rendering }
