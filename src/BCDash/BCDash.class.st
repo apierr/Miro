@@ -32,9 +32,7 @@ BCDash >> initialize [
 
 { #category : #rendering }
 BCDash >> renderContentOn: html [
-		html render: ChartDemo new.
-		html render: SliderDemo new.
-		html render: ButtonDemo new.
+		html render: ComponentGrid new.
 ]
 
 { #category : #rendering }
