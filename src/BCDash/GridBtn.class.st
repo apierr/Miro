@@ -1,11 +1,11 @@
 Class {
-	#name : #BtnAdd,
+	#name : #GridBtn,
 	#superclass : #ComponentGrid,
 	#category : #BCDash
 }
 
 { #category : #rendering }
-BtnAdd >> renderContentOn: html [
+GridBtn >> renderContentOn: html [
 	html mdlButton
 		id: html nextId;
 		fab;

@@ -6,14 +6,14 @@ Class {
 
 { #category : #rendering }
 ComponentGrid >> renderContentOn: html [
-
 	html mdlGrid
-		shadow: 2;
 		with: [ 1 to: 6 do: [ :i | 
 				html mdlCell
+				   id: html nextId;
 					class: 'grid-cell-demo';
 					size: 2;
 					with: [ 
-						html render: BtnAdd new.
+						html render: GridBtn new.
+						html render: GridContainer new.
 						 ] ]].
 ]
