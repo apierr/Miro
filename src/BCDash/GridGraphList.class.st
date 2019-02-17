@@ -2,15 +2,42 @@ Class {
 	#name : #GridGraphList,
 	#superclass : #ComponentGrid,
 	#instVars : [
-		'count'
+		'count',
+		'containerId'
 	],
 	#category : #BCDash
 }
+
+{ #category : #accessing }
+GridGraphList class >> containerId: id [
+	^ self new containerId: id;
+	yourself 
+]
 
 { #category : #'as yet unclassified' }
 GridGraphList >> anchorClicked [
 	"comment stating purpose of message"
 	count := count + 1
+]
+
+{ #category : #accessing }
+GridGraphList >> containerId [
+	^ containerId
+]
+
+{ #category : #accessing }
+GridGraphList >> containerId: anObject [
+	containerId := anObject
+]
+
+{ #category : #accessing }
+GridGraphList >> count [
+	^ count
+]
+
+{ #category : #accessing }
+GridGraphList >> count: anObject [
+	count := anObject
 ]
 
 { #category : #'as yet unclassified' }
@@ -30,10 +57,19 @@ GridGraphList >> loadCounter: html [
 
 { #category : #'as yet unclassified' }
 GridGraphList >> loadObject: html [
-	^(html jQuery id: html lastId) load
+	^(html jQuery id: self containerId) load
           html: [ :renderer | 
-              self anchorClicked .
-              self renderCounterOn: html ];
+              
+              self renderObjectOn: html graph: 'hello' ];
+          onComplete: 'componentHandler.upgradeDom()'
+]
+
+{ #category : #'as yet unclassified' }
+GridGraphList >> loadObject: html object: anObject [
+	^(html jQuery id: self containerId) load
+          html: [ :renderer | 
+              
+              self renderObjectOn: html graph: anObject ];
           onComplete: 'componentHandler.upgradeDom()'
 ]
 
@@ -48,9 +84,13 @@ GridGraphList >> renderContentOn: html [
 	html mdlButton
 		raised;
 		rippleEffect;
-        onClick: ( self loadObject: html);
+        onClick: ( self loadObject: html object: name);
 		  with: name.]
 	]].
+	html div
+      id: html nextId;
+		with: self containerId.
+  
 
 ]
 
@@ -58,4 +98,10 @@ GridGraphList >> renderContentOn: html [
 GridGraphList >> renderCounterOn: html [
 	"comment stating purpose of message"
 	html heading: count
+]
+
+{ #category : #rendering }
+GridGraphList >> renderObjectOn: html graph: aGraph [
+	"comment stating purpose of message"
+	html heading: aGraph
 ]

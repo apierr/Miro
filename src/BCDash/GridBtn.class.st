@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #rendering }
+GridBtn >> containerID: id [
+	^ self new containerID: id;
+	yourself 
+]
+
+{ #category : #rendering }
 GridBtn >> renderContentOn: html [
 	html mdlButton
 		id: html nextId;
