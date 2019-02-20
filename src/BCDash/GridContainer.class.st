@@ -1,8 +1,6 @@
 Class {
 	#name : #GridContainer,
 	#superclass : #ComponentGrid,
-	#traits : 'TestTrait',
-	#classTraits : 'TestTrait classTrait',
 	#instVars : [
 		'containerId'
 	],
@@ -29,9 +27,6 @@ GridContainer >> containerId: id [
 { #category : #rendering }
 GridContainer >> renderContentOn:html [
 	"comment stating purpose of message"
-	
-	self renderId: html id:'testId'.
-	
 	 html div
       id: html nextId;
 		with: html lastId, ' ', 'graph object' .
@@ -46,9 +41,4 @@ GridContainer >> renderContentOn:html [
 		openButtonId: html lastId;
 		with: [ html render: (GridDialog containerId: self containerId) . ]
 
-	"
-	 html div
-      id: html nextId;
-    with: MDLExampleRootDialogRoot new
-"
 ]

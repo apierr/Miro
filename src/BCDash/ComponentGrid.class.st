@@ -13,7 +13,6 @@ ComponentGrid >> renderContentOn: html [
 					class: 'grid-cell-demo';
 					size: 2;
 					with: [ 
-						html render: GridBtn new.
 						html render: GridContainer new.
 						 ] ]].
 ]
