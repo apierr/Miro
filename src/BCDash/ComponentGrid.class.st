@@ -11,7 +11,7 @@ ComponentGrid >> renderContentOn: html [
 				html mdlCell
 				   id: html nextId;
 					class: 'grid-cell-demo';
-					size: 2;
+					size: 6;
 					with: [ 
 						html render: GridContainer new.
 						 ] ]].

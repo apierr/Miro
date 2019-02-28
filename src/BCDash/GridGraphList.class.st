@@ -78,7 +78,6 @@ GridGraphList >> renderContentOn: html [
 	html div
         id: html nextId.
 	html mdlList
-		style: 'width: 300px';
 		with: [ 
 			#('Bullet' 'Bar' 'Line' 'Box' 'Scatter' 'Treemaps') do: [ :name | html mdlListItem: [ 
 	html mdlButton
@@ -103,5 +102,17 @@ GridGraphList >> renderCounterOn: html [
 { #category : #rendering }
 GridGraphList >> renderObjectOn: html graph: aGraph [
 	"comment stating purpose of message"
-	html heading: aGraph
+	|moveActions|
+	moveActions := {
+  		'Bullet' -> (ReportBullet new).
+  		'Bar' -> (ReportBar new).
+		'Line' -> (ReportLine new).
+		'Box' -> (ReportBox new).
+		'Scatter' -> (ReportScatter new).
+		'Treemaps' -> (ReportTreemaps new).
+	} asDictionary.
+	
+	"html heading: aGraph."
+
+   	html render: (moveActions at: aGraph) 
 ]
