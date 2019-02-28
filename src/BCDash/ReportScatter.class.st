@@ -6,7 +6,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 ReportScatter >> imageUrl [
-	^'https://chartio.com/images/tutorials/scatter-plot/Scatter-Plot-Weight-and-Height-Scatter-Plot-Trendline.png'
+	^'https://i.stack.imgur.com/tWwdR.png'
 ]
 
 { #category : #rendering }

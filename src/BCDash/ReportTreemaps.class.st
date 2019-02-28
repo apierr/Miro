@@ -6,7 +6,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 ReportTreemaps >> imageUrl [
-	^'https://www.jidesoft.com/images/treemap-04.png'
+	^'https://empleatron.github.io/media/blog/images/demanda_laboral_mini.png'
 ]
 
 { #category : #rendering }
