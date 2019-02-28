@@ -54,6 +54,13 @@ GridContainer >> renderContentOn:html [
 
 	 html div
       id: containerId;
-		with: containerId, ' ', 'graph object' .
+		class: 'grid-container';
+		with: containerId, ' ', ' graph object' .
 	self containerId:  containerId.
+]
+
+{ #category : #rendering }
+GridContainer >> style [
+	"TODO: this style does not appear in the html source code!"
+	^ '.grid-container {background: #ccc; }'
 ]
