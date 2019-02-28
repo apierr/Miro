@@ -47,9 +47,9 @@ GridContainer >> renderContentOn:html [
 		id: html nextId;
 		fab;
 		colored;
-		with: self containerId.
+		with: '+'.
 	html mdlDialog
-		openButtonId: html lastId;
+		openButtonId: html lastId ;
 		with: [ html render: (GridDialog containerId: self containerId) . ].
 
 	 html div

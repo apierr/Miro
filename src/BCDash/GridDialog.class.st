@@ -25,6 +25,6 @@ GridDialog >> containerId: anObject [
 
 { #category : #rendering }
 GridDialog >> renderContentOn: html [		
-	html mdlDialogTitle: self containerId .
+	html mdlDialogTitle: self containerId.
 	html mdlDialogContent: [ html render: (GridGraphList containerId: self containerId) ] 
 ]
