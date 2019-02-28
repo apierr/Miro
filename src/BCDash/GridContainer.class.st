@@ -25,12 +25,23 @@ GridContainer >> containerId: id [
 ]
 
 { #category : #rendering }
-GridContainer >> renderContentOn:html [
+GridContainer >> initialize [ 
 	"comment stating purpose of message"
-	 html div
-      id: html nextId;
-		with: html lastId, ' ', 'graph object' .
-	self containerId:  html lastId.
+
+	super initialize .
+	"TODO: I would like to generate the id here (html lastId). Now I  generate the lastId in renderContentOn"
+	containerId  := nil  
+
+]
+
+{ #category : #rendering }
+GridContainer >> renderContentOn:html [
+	"QUESTION: containerId and self self containerId are the same?
+	becasuse if I do |containerId| it says |Name already defined| ...
+	containerId should be the instance variable and self containerId: the method! 
+	It makes me confused. Is this correct?"
+
+	containerId :=  html nextId.
 	
 	html mdlButton
 		id: html nextId;
@@ -39,6 +50,10 @@ GridContainer >> renderContentOn:html [
 		with: self containerId.
 	html mdlDialog
 		openButtonId: html lastId;
-		with: [ html render: (GridDialog containerId: self containerId) . ]
+		with: [ html render: (GridDialog containerId: self containerId) . ].
 
+	 html div
+      id: containerId;
+		with: containerId, ' ', 'graph object' .
+	self containerId:  containerId.
 ]
