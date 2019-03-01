@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerId'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #rendering }
@@ -25,20 +25,42 @@ GridContainer >> containerId: id [
 ]
 
 { #category : #rendering }
-GridContainer >> renderContentOn:html [
+GridContainer >> initialize [ 
 	"comment stating purpose of message"
-	 html div
-      id: html nextId;
-		with: html lastId, ' ', 'graph object' .
-	self containerId:  html lastId.
+
+	super initialize .
+	"TODO: I would like to generate the id here (html lastId). Now I  generate the lastId in renderContentOn"
+	containerId  := nil  
+
+]
+
+{ #category : #rendering }
+GridContainer >> renderContentOn:html [
+	"QUESTION: containerId and self self containerId are the same?
+	becasuse if I do |containerId| it says |Name already defined| ...
+	containerId should be the instance variable and self containerId: the method! 
+	It makes me confused. Is this correct?"
+
+	containerId :=  html nextId.
 	
 	html mdlButton
 		id: html nextId;
 		fab;
 		colored;
-		with: self containerId.
+		with: '+'.
 	html mdlDialog
-		openButtonId: html lastId;
-		with: [ html render: (GridDialog containerId: self containerId) . ]
+		openButtonId: html lastId ;
+		with: [ html render: (GridDialog containerId: self containerId) . ].
 
+	 html div
+      id: containerId;
+		class: 'grid-container';
+		with: ''. "containerId, ' ', ' graph object' ."
+	self containerId:  containerId.
+]
+
+{ #category : #rendering }
+GridContainer >> style [
+	"TODO: this style does not appear in the html source code!"
+	^ '.grid-container {background: #ccc; }'
 ]

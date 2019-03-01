@@ -1,5 +1,5 @@
 Class {
 	#name : #Component,
 	#superclass : #WAComponent,
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }

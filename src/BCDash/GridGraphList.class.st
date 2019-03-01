@@ -5,7 +5,7 @@ Class {
 		'count',
 		'containerId'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #accessing }
@@ -78,9 +78,8 @@ GridGraphList >> renderContentOn: html [
 	html div
         id: html nextId.
 	html mdlList
-		style: 'width: 300px';
 		with: [ 
-			#('Bullet' 'Bar' 'Line' 'Box' 'Scatter' 'Treemaps') do: [ :name | html mdlListItem: [ 
+			#('Bar' 'Bullet' 'Box' 'Gauge' 'Line'   'Radar' 'Scatter' 'Treemaps' 'Del') do: [ :name | html mdlListItem: [ 
 	html mdlButton
 		raised;
 		rippleEffect;
@@ -103,5 +102,19 @@ GridGraphList >> renderCounterOn: html [
 { #category : #rendering }
 GridGraphList >> renderObjectOn: html graph: aGraph [
 	"comment stating purpose of message"
-	html heading: aGraph
+	|moveActions|
+	moveActions := {
+  		'Bullet' -> (ReportBullet new).
+  		'Bar' -> (ReportBar new).
+		'Line' -> (ReportLine new).
+		'Box' -> (ReportBox new).
+		'Gauge' -> (ReportGauge new).
+		'Radar' -> (ReportRadar new).
+		'Scatter' -> (ReportScatter new).
+		'Treemaps' -> (ReportTreemaps new).
+		'Del' -> (ReportNil new).
+	} asDictionary.
+	
+	"html heading: aGraph."
+   	html render: (moveActions at: aGraph) 
 ]
