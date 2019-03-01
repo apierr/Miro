@@ -79,7 +79,7 @@ GridGraphList >> renderContentOn: html [
         id: html nextId.
 	html mdlList
 		with: [ 
-			#('Bullet' 'Bar' 'Line' 'Box' 'Scatter' 'Treemaps') do: [ :name | html mdlListItem: [ 
+			#('Bar' 'Bullet' 'Box' 'Line'   'Radar' 'Scatter' 'Treemaps') do: [ :name | html mdlListItem: [ 
 	html mdlButton
 		raised;
 		rippleEffect;
@@ -108,11 +108,11 @@ GridGraphList >> renderObjectOn: html graph: aGraph [
   		'Bar' -> (ReportBar new).
 		'Line' -> (ReportLine new).
 		'Box' -> (ReportBox new).
+		'Radar' -> (ReportRadar new).
 		'Scatter' -> (ReportScatter new).
 		'Treemaps' -> (ReportTreemaps new).
 	} asDictionary.
 	
 	"html heading: aGraph."
-
    	html render: (moveActions at: aGraph) 
 ]
