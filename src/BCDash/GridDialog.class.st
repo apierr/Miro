@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerId'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #accessing }
@@ -25,6 +25,6 @@ GridDialog >> containerId: anObject [
 
 { #category : #rendering }
 GridDialog >> renderContentOn: html [		
-	html mdlDialogTitle: self containerId.
+	html mdlDialogTitle: 'Graph list'. "self containerId."
 	html mdlDialogContent: [ html render: (GridGraphList containerId: self containerId) ] 
 ]

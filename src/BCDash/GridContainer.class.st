@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerId'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #rendering }
@@ -55,7 +55,7 @@ GridContainer >> renderContentOn:html [
 	 html div
       id: containerId;
 		class: 'grid-container';
-		with: containerId, ' ', ' graph object' .
+		with: ''. "containerId, ' ', ' graph object' ."
 	self containerId:  containerId.
 ]
 

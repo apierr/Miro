@@ -1,16 +1,16 @@
 Class {
-	#name : #ReportScatter,
+	#name : #ReportGauge,
 	#superclass : #Reports,
 	#category : #'BCDash-Core'
 }
 
 { #category : #'as yet unclassified' }
-ReportScatter >> imageUrl [
-	^'https://i.stack.imgur.com/tWwdR.png'
+ReportGauge >> imageUrl [
+	^'https://www.tutorialspoint.com/advanced_excel_charts/images/gauge_chart.jpg'
 ]
 
 { #category : #rendering }
-ReportScatter >> renderContentOn: html [
+ReportGauge >> renderContentOn: html [
 	html image
 		url: self imageUrl;
 		width: '250'

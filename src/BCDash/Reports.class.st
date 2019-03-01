@@ -1,5 +1,5 @@
 Class {
 	#name : #Reports,
 	#superclass : #ComponentPage,
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }

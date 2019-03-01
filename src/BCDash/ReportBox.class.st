@@ -1,7 +1,7 @@
 Class {
 	#name : #ReportBox,
 	#superclass : #Reports,
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #rendering }

@@ -1,7 +1,7 @@
 Class {
 	#name : #ReportTreemaps,
 	#superclass : #Reports,
-	#category : #BCDash
+	#category : #'BCDash-Core'
 }
 
 { #category : #'as yet unclassified' }
