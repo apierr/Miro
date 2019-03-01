@@ -1,62 +1,62 @@
 Class {
-	#name : #SimpleDataModelTest,
+	#name : #ListOfSingleValuesTest,
 	#superclass : #TestCase,
 	#category : #BCDashTest
 }
 
 { #category : #tests }
-SimpleDataModelTest >> testAlternateCreation [
+ListOfSingleValuesTest >> testAlternateCreation [
 	| line |
-	line := BCLine new 	
+	line := BCListOfSingleValues new 	
 		data: { 22  . 75  . 55 };
 		labels:  { 'low' .  'high' .  'middle'}.
 	self assert: line maxValue equals: 75
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testBrokenAlternateCreation [
+ListOfSingleValuesTest >> testBrokenAlternateCreation [
 	| line |
-	line := BCLine new 	
+	line := BCListOfSingleValues new 	
 		data: { 22  . 75  . 55 }
 		labels:  { 'low' .  'high' .  'middle'}.
 	self assert: line maxValue equals: 75
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testForcingAllInformationAlternateCreation [
+ListOfSingleValuesTest >> testForcingAllInformationAlternateCreation [
 	| line |
-	line := BCLine new 	
+	line := BCListOfSingleValues new 	
 		data: { 22  . 75  . 55 }
 		labels:  { 'low' .  'high' .  'middle'}.
 	self assert: line maxValue equals: 75
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testLabelsWhenNoLabelsAreSpecified [
+ListOfSingleValuesTest >> testLabelsWhenNoLabelsAreSpecified [
 	| line |
-	line := BCLine new data: { 22 . 75 . 55 }.
+	line := BCListOfSingleValues new data: { 22 . 75 . 55 }.
 	self assert: line keys equals: #( '22' '75' '55')
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testLineKeys [
+ListOfSingleValuesTest >> testLineKeys [
 	| line |
-	line := BCLine new 	
+	line := BCListOfSingleValues new 	
 		labelledData: { 22 -> 'low' . 75 -> 'high' . 55 -> 'middle'}.
 	self assert: line keys equals: #('low' 'high' 'middle')
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testLineMaxValue [ 
+ListOfSingleValuesTest >> testLineMaxValue [ 
 	| line |
-	line := BCLine new 	
+	line := BCListOfSingleValues new 	
 		labelledData: { 22 -> 'low' . 75 -> 'high' . 55 -> 'middle'}.
 	self assert: line maxValue equals: 75
 ]
 
 { #category : #tests }
-SimpleDataModelTest >> testNoLabelAlternateCreation [
+ListOfSingleValuesTest >> testNoLabelAlternateCreation [
 	| line |
-	line := BCLine new data: { 22  . 75  . 55 }.
+	line := BCListOfSingleValues new data: { 22  . 75  . 55 }.
 	self assert: line maxValue equals: 75
 ]
