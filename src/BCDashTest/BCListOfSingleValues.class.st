@@ -9,6 +9,12 @@ Class {
 }
 
 { #category : #accessing }
+BCListOfSingleValues >> data [
+	
+	^ data 
+]
+
+{ #category : #accessing }
 BCListOfSingleValues >> data: aCollection [ 
 	
 	data := aCollection
@@ -49,8 +55,21 @@ BCListOfSingleValues >> labels: aCollection [
 BCListOfSingleValues >> maxValue [
 	
 	| max |
-	"labelledData is cmoposed of pair value x label"
 	max := data anyOne. 
 	data do: [ :each | max := each max: max ].
+	^ max
+]
+
+{ #category : #api }
+BCListOfSingleValues >> median [
+	self shouldBeImplemented.
+]
+
+{ #category : #'advanced accessing' }
+BCListOfSingleValues >> minValue [
+	
+	| max |
+	max := data anyOne. 
+	data do: [ :each | max := each min: max ].
 	^ max
 ]

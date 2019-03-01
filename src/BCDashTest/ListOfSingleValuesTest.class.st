@@ -55,6 +55,14 @@ ListOfSingleValuesTest >> testLineMaxValue [
 ]
 
 { #category : #tests }
+ListOfSingleValuesTest >> testLineMinValue [ 
+	| line |
+	line := BCListOfSingleValues new 	
+		labelledData: { 22 -> 'low' . 75 -> 'high' . 55 -> 'middle'}.
+	self assert: line minValue equals: 22
+]
+
+{ #category : #tests }
 ListOfSingleValuesTest >> testNoLabelAlternateCreation [
 	| line |
 	line := BCListOfSingleValues new data: { 22  . 75  . 55 }.
