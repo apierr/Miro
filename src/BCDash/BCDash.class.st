@@ -1,11 +1,6 @@
 Class {
 	#name : #BCDash,
-	#superclass : #WAComponent,
-	#instVars : [
-		'a',
-		'b',
-		'count'
-	],
+	#superclass : #Component,
 	#category : #'BCDash-Core'
 }
 
@@ -26,7 +21,6 @@ BCDash class >> initializeAs: aString [
 { #category : #initialization }
 BCDash >> initialize [
 	super initialize.
-	count := 0
 
 ]
 
@@ -37,9 +31,13 @@ BCDash >> renderContentOn: html [
 
 { #category : #rendering }
 BCDash >> style [ 
-	^ '.mdl-pagination__current{
+	^ '
+		.mdl-pagination__current{
         box-shadow: inset 0px -4px 0px 0px #FFC107 !important;
-    }'
+   	 	}
+    	.grid-container {background: #eee; }
+	'
+   
 ]
 
 { #category : #updating }
