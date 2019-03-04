@@ -1,6 +1,6 @@
 Class {
 	#name : #ReportBar,
-	#superclass : #Reports,
+	#superclass : #Report,
 	#category : #'BCDash-Core'
 }
 

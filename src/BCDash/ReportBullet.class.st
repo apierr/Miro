@@ -1,6 +1,6 @@
 Class {
 	#name : #ReportBullet,
-	#superclass : #Reports,
+	#superclass : #Report,
 	#category : #'BCDash-Core'
 }
 

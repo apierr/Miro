@@ -1,10 +1,10 @@
 Class {
 	#name : #BCBoxploter,
-	#superclass : #Object,
+	#superclass : #BCPlot,
 	#instVars : [
 		'list'
 	],
-	#category : #BCDashTest
+	#category : #BCDash
 }
 
 { #category : #api }

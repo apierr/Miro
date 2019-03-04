@@ -1,11 +1,11 @@
 Class {
 	#name : #BCListOfSingleValues,
-	#superclass : #Object,
+	#superclass : #BCValue,
 	#instVars : [
 		'data',
 		'labels'
 	],
-	#category : #BCDashTest
+	#category : #BCDash
 }
 
 { #category : #accessing }

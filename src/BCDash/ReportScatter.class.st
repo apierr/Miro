@@ -1,6 +1,6 @@
 Class {
 	#name : #ReportScatter,
-	#superclass : #Reports,
+	#superclass : #Report,
 	#category : #'BCDash-Core'
 }
 

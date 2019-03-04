@@ -1,6 +1,6 @@
 Class {
 	#name : #ReportTreemaps,
-	#superclass : #Reports,
+	#superclass : #Report,
 	#category : #'BCDash-Core'
 }
 

@@ -1,6 +1,6 @@
 Class {
 	#name : #ReportGauge,
-	#superclass : #Reports,
+	#superclass : #Report,
 	#category : #'BCDash-Core'
 }
 
