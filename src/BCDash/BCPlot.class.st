@@ -1,5 +1,5 @@
 Class {
 	#name : #BCPlot,
 	#superclass : #Object,
-	#category : #'BCDash-Core'
+	#category : #'BCDash-Plotter'
 }

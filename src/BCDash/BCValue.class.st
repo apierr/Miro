@@ -1,5 +1,5 @@
 Class {
 	#name : #BCValue,
 	#superclass : #Object,
-	#category : #'BCDash-Core'
+	#category : #'BCDash-Value'
 }

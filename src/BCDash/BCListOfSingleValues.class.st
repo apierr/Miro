@@ -5,7 +5,7 @@ Class {
 		'data',
 		'labels'
 	],
-	#category : #BCDash
+	#category : #'BCDash-Value'
 }
 
 { #category : #accessing }
