@@ -20,10 +20,20 @@ BCBoxPlotter >> firstQuartile [
 
 ]
 
+{ #category : #accessing }
+BCBoxPlotter >> interquartileRange [
+	^self lastQuartile - self firstQuartile .
+]
+
 { #category : #api }
 BCBoxPlotter >> lastQuartile [
 	
 	^ list data at: (list data size / 4 * 3) floor
+]
+
+{ #category : #accessing }
+BCBoxPlotter >> lowerBoundaryOutliers [
+	^self firstQuartile - (1.5 * self interquartileRange).
 ]
 
 { #category : #api }
@@ -44,4 +54,9 @@ BCBoxPlotter >> minimum [
 { #category : #initialization }
 BCBoxPlotter >> on: aBCListOfSingleValues [ 
 	list := aBCListOfSingleValues
+]
+
+{ #category : #accesing }
+BCBoxPlotter >> upperBoundaryOutliers [
+	^self lastQuartile + (1.5 * self interquartileRange).
 ]
