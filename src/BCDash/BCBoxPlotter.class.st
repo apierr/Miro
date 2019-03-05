@@ -1,5 +1,5 @@
 Class {
-	#name : #BCBoxploter,
+	#name : #BCBoxPlotter,
 	#superclass : #Object,
 	#instVars : [
 		'list'
@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #api }
-BCBoxploter >> firstQuartile [
+BCBoxPlotter >> firstQuartile [
 	
 	| l |
 	l := list data size.
@@ -21,27 +21,27 @@ BCBoxploter >> firstQuartile [
 ]
 
 { #category : #api }
-BCBoxploter >> lastQuartile [
+BCBoxPlotter >> lastQuartile [
 	
 	^ list data at: (list data size / 4 * 3) floor
 ]
 
 { #category : #api }
-BCBoxploter >> maximum [
+BCBoxPlotter >> maximum [
 	^ list maxValue
 ]
 
 { #category : #api }
-BCBoxploter >> median [
+BCBoxPlotter >> median [
 	^ list data median
 ]
 
 { #category : #api }
-BCBoxploter >> minimum [
+BCBoxPlotter >> minimum [
 	^ list minValue
 ]
 
 { #category : #initialization }
-BCBoxploter >> on: aBCListOfSingleValues [ 
+BCBoxPlotter >> on: aBCListOfSingleValues [ 
 	list := aBCListOfSingleValues
 ]
