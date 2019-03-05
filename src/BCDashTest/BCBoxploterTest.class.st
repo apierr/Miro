@@ -1,7 +1,7 @@
 Class {
 	#name : #BCBoxploterTest,
 	#superclass : #TestCase,
-	#category : #BCDashTest
+	#category : #'BCDashTest-Plotter'
 }
 
 { #category : #tests }
