@@ -78,6 +78,12 @@ BCListOfSingleValues >> minValue [
 BCListOfSingleValues >> mostFrequentValue [
 	| mostFrequent |
 	mostFrequent := data anyOne. 
-   
+   self flag: #todo.
+	"Finish to implement"
 	^ mostFrequent
+]
+
+{ #category : #accessing }
+BCListOfSingleValues >> testRangeValue [
+	^ self maxValue - self minValue 
 ]
