@@ -73,3 +73,11 @@ BCListOfSingleValues >> minValue [
 	data do: [ :each | max := each min: max ].
 	^ max
 ]
+
+{ #category : #accessing }
+BCListOfSingleValues >> mostFrequentValue [
+	| mostFrequent |
+	mostFrequent := data anyOne. 
+   
+	^ mostFrequent
+]

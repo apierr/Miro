@@ -1,7 +1,7 @@
 Class {
 	#name : #ListOfSingleValuesTest,
 	#superclass : #TestCase,
-	#category : #BCDashTest
+	#category : #'BCDashTest-Data'
 }
 
 { #category : #tests }
@@ -60,6 +60,13 @@ ListOfSingleValuesTest >> testLineMinValue [
 	line := BCListOfSingleValues new 	
 		labelledData: { 22 -> 'low' . 75 -> 'high' . 55 -> 'middle'}.
 	self assert: line minValue equals: 22
+]
+
+{ #category : #tests }
+ListOfSingleValuesTest >> testMostFrequentValue [
+	| line |
+	line := BCListOfSingleValues new data: { 22  . 75  . 55 . 75 .55 .75}.
+	self assert: line mostFrequentValue equals: 75
 ]
 
 { #category : #tests }
