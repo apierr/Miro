@@ -79,7 +79,7 @@ GridGraphList >> renderContentOn: html [
         id: html nextId.
 	html mdlList
 		with: [ 
-			#('Bar' 'Bullet' 'Box' 'Gauge' 'Line'   'Radar' 'Scatter' 'Treemaps' 'Del') do: [ :name | html mdlListItem: [ 
+			Reports allReportKinds collect: #displayName thenDo: [ :name | html mdlListItem: [ 
 	html mdlButton
 		raised;
 		rippleEffect;
@@ -102,19 +102,6 @@ GridGraphList >> renderCounterOn: html [
 { #category : #rendering }
 GridGraphList >> renderObjectOn: html graph: aGraph [
 	"comment stating purpose of message"
-	|moveActions|
-	moveActions := {
-  		'Bullet' -> (ReportBullet new).
-  		'Bar' -> (ReportBar new).
-		'Line' -> (ReportLine new).
-		'Box' -> (ReportBox new).
-		'Gauge' -> (ReportGauge new).
-		'Radar' -> (ReportRadar new).
-		'Scatter' -> (ReportScatter new).
-		'Treemaps' -> (ReportTreemaps new).
-		'Del' -> (ReportNil new).
-	} asDictionary.
 	
-	"html heading: aGraph."
-   	html render: (moveActions at: aGraph) 
+   	html render: (Reports allReportKinds detect: [ :report | report displayName = aGraph ]) new
 ]
