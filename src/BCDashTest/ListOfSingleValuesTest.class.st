@@ -1,7 +1,7 @@
 Class {
 	#name : #ListOfSingleValuesTest,
 	#superclass : #TestCase,
-	#category : #BCDashTest
+	#category : #'BCDashTest-Data'
 }
 
 { #category : #tests }
@@ -63,8 +63,22 @@ ListOfSingleValuesTest >> testLineMinValue [
 ]
 
 { #category : #tests }
+ListOfSingleValuesTest >> testMostFrequentValue [
+	| line |
+	line := BCListOfSingleValues new data: { 22  . 75  . 55 . 75 .55 .75}.
+	self assert: line mostFrequentValue equals: 75
+]
+
+{ #category : #tests }
 ListOfSingleValuesTest >> testNoLabelAlternateCreation [
 	| line |
 	line := BCListOfSingleValues new data: { 22  . 75  . 55 }.
 	self assert: line maxValue equals: 75
+]
+
+{ #category : #tests }
+ListOfSingleValuesTest >> testRangeValue [
+	| line |
+	line := BCListOfSingleValues new data: { 22  . 75  . 55 . 75 .55 .75}.
+	self assert: line rangeValue equals: 53
 ]

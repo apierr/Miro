@@ -5,7 +5,7 @@ Class {
 		'data',
 		'labels'
 	],
-	#category : #BCDashTest
+	#category : #'BCDash-Data'
 }
 
 { #category : #accessing }
@@ -72,4 +72,18 @@ BCListOfSingleValues >> minValue [
 	max := data anyOne. 
 	data do: [ :each | max := each min: max ].
 	^ max
+]
+
+{ #category : #accessing }
+BCListOfSingleValues >> mostFrequentValue [
+	| mostFrequent |
+	mostFrequent := data anyOne. 
+   self flag: #todo.
+	"Finish to implement"
+	^ mostFrequent
+]
+
+{ #category : #accessing }
+BCListOfSingleValues >> rangeValue [
+	^ self maxValue - self minValue 
 ]
