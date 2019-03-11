@@ -80,5 +80,5 @@ ListOfSingleValuesTest >> testNoLabelAlternateCreation [
 ListOfSingleValuesTest >> testRangeValue [
 	| line |
 	line := BCListOfSingleValues new data: { 22  . 75  . 55 . 75 .55 .75}.
-	self assert: line testRangeValue equals: 53
+	self assert: line rangeValue equals: 53
 ]

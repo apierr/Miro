@@ -84,6 +84,6 @@ BCListOfSingleValues >> mostFrequentValue [
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> testRangeValue [
+BCListOfSingleValues >> rangeValue [
 	^ self maxValue - self minValue 
 ]
