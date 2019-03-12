@@ -1,20 +1,20 @@
 Class {
-	#name : #ReportNil,
-	#superclass : #Reports,
+	#name : #NilPlot,
+	#superclass : #MiroPlot,
 	#category : #'BCDash-Core'
 }
 
 { #category : #accessing }
-ReportNil class >> displayName [
+NilPlot class >> displayName [
 	^ 'Deletion'
 ]
 
 { #category : #accessing }
-ReportNil class >> priority [
+NilPlot class >> priority [
 	^ 100
 ]
 
 { #category : #rendering }
-ReportNil >> renderContentOn: html [
+NilPlot >> renderContentOn: html [
 	''
 ]

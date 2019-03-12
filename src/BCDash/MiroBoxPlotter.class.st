@@ -1,5 +1,5 @@
 Class {
-	#name : #BCBoxPlotter,
+	#name : #MiroBoxPlotter,
 	#superclass : #Object,
 	#instVars : [
 		'list'
@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #api }
-BCBoxPlotter >> firstQuartile [
+MiroBoxPlotter >> firstQuartile [
 	
 	| l |
 	l := list data size.
@@ -21,42 +21,42 @@ BCBoxPlotter >> firstQuartile [
 ]
 
 { #category : #accessing }
-BCBoxPlotter >> interquartileRange [
+MiroBoxPlotter >> interquartileRange [
 	^self lastQuartile - self firstQuartile .
 ]
 
 { #category : #api }
-BCBoxPlotter >> lastQuartile [
+MiroBoxPlotter >> lastQuartile [
 	
 	^ list data at: (list data size / 4 * 3) floor
 ]
 
 { #category : #accessing }
-BCBoxPlotter >> lowerBoundaryOutliers [
+MiroBoxPlotter >> lowerBoundaryOutliers [
 	^self firstQuartile - (1.5 * self interquartileRange).
 ]
 
 { #category : #api }
-BCBoxPlotter >> maximum [
+MiroBoxPlotter >> maximum [
 	^ list maxValue
 ]
 
 { #category : #api }
-BCBoxPlotter >> median [
+MiroBoxPlotter >> median [
 	^ list data median
 ]
 
 { #category : #api }
-BCBoxPlotter >> minimum [
+MiroBoxPlotter >> minimum [
 	^ list minValue
 ]
 
 { #category : #initialization }
-BCBoxPlotter >> on: aBCListOfSingleValues [ 
+MiroBoxPlotter >> on: aBCListOfSingleValues [ 
 	list := aBCListOfSingleValues
 ]
 
 { #category : #accesing }
-BCBoxPlotter >> upperBoundaryOutliers [
+MiroBoxPlotter >> upperBoundaryOutliers [
 	^self lastQuartile + (1.5 * self interquartileRange).
 ]

@@ -79,7 +79,7 @@ GridGraphList >> renderContentOn: html [
         id: html nextId.
 	html mdlList
 		with: [ 
-			Reports allReportKinds collect: #displayName thenDo: [ :name | html mdlListItem: [ 
+			MiroPlot allReportKinds collect: #displayName thenDo: [ :name | html mdlListItem: [ 
 	html mdlButton
 		raised;
 		rippleEffect;
@@ -103,5 +103,5 @@ GridGraphList >> renderCounterOn: html [
 GridGraphList >> renderObjectOn: html graph: aGraph [
 	"comment stating purpose of message"
 	
-   	html render: (Reports allReportKinds detect: [ :report | report displayName = aGraph ]) new
+   	html render: (MiroPlot allReportKinds detect: [ :report | report displayName = aGraph ]) new
 ]

@@ -1,11 +1,11 @@
 Class {
-	#name : #ReportBox,
-	#superclass : #Reports,
+	#name : #BoxPlot,
+	#superclass : #MiroPlot,
 	#category : #'BCDash-Core'
 }
 
 { #category : #rendering }
-ReportBox >> renderContentOn: html [
+BoxPlot >> renderContentOn: html [
 	| chartData |
 	chartData := Chart2dData
 		xObjects: #(SLOC FC)

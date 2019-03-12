@@ -1,5 +1,5 @@
 Class {
-	#name : #BCListOfSingleValues,
+	#name : #MiroListOfSingleValues,
 	#superclass : #Object,
 	#instVars : [
 		'data',
@@ -9,50 +9,50 @@ Class {
 }
 
 { #category : #accessing }
-BCListOfSingleValues >> data [
+MiroListOfSingleValues >> data [
 	
 	^ data 
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> data: aCollection [ 
+MiroListOfSingleValues >> data: aCollection [ 
 	
 	data := aCollection
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> data: dataCollection labels: labelCollection [ 
+MiroListOfSingleValues >> data: dataCollection labels: labelCollection [ 
 	data := dataCollection.
 	labels := labelCollection
 ]
 
 { #category : #initialization }
-BCListOfSingleValues >> initialize [ 
+MiroListOfSingleValues >> initialize [ 
 	
 	data := #().
 	labels := #()
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> keys [
+MiroListOfSingleValues >> keys [
 
 	^ labels ifEmpty: [ labels := data collect: [ :each | each asString ] ]
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> labelledData: aCollection [ 
+MiroListOfSingleValues >> labelledData: aCollection [ 
 	
 	data := aCollection collect: #key.
 	labels := aCollection collect: #value
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> labels: aCollection [ 
+MiroListOfSingleValues >> labels: aCollection [ 
 	labels := aCollection
 ]
 
 { #category : #'advanced accessing' }
-BCListOfSingleValues >> maxValue [
+MiroListOfSingleValues >> maxValue [
 	
 	| max |
 	max := data anyOne. 
@@ -61,12 +61,12 @@ BCListOfSingleValues >> maxValue [
 ]
 
 { #category : #api }
-BCListOfSingleValues >> median [
+MiroListOfSingleValues >> median [
 	self shouldBeImplemented.
 ]
 
 { #category : #'advanced accessing' }
-BCListOfSingleValues >> minValue [
+MiroListOfSingleValues >> minValue [
 	
 	| max |
 	max := data anyOne. 
@@ -75,7 +75,7 @@ BCListOfSingleValues >> minValue [
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> mostFrequentValue [
+MiroListOfSingleValues >> mostFrequentValue [
 	| mostFrequent |
 	mostFrequent := data anyOne. 
    self flag: #todo.
@@ -84,6 +84,6 @@ BCListOfSingleValues >> mostFrequentValue [
 ]
 
 { #category : #accessing }
-BCListOfSingleValues >> rangeValue [
+MiroListOfSingleValues >> rangeValue [
 	^ self maxValue - self minValue 
 ]
