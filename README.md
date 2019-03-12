@@ -3,8 +3,8 @@
 ```smalltalk
     Metacello
       new
-      baseline: 'BCDash';
-      repository: 'github://apierr/BCDash/src';
+      baseline: 'Miro';
+      repository: 'github://apierr/Miro/src';
       load.
 ```
       
