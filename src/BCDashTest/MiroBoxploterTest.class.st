@@ -5,16 +5,6 @@ Class {
 }
 
 { #category : #tests }
-MiroBoxploterTest >> testBoxplotFirstQuartile [
-
-	| list bp |
-	list := MiroListOfSingleValues new data: #(0 0 0 50 100 100 100).
-	bp := MiroBoxPlotter new on: list.
-	self assert: bp firstQuartile equals: 0.
-
-]
-
-{ #category : #tests }
 MiroBoxploterTest >> testBoxplotIsWorking [
 
 	| list bp |
@@ -27,12 +17,12 @@ MiroBoxploterTest >> testBoxplotIsWorking [
 ]
 
 { #category : #tests }
-MiroBoxploterTest >> testBoxplotLastQuartile [
+MiroBoxploterTest >> testFirstQuartile [
 
 	| list bp |
-	list := MiroListOfSingleValues new data: #(0 0 0 50 100 100 100).
+	list := MiroListOfSingleValues new data: #(1 4 4 4 5 5 5 9).
 	bp := MiroBoxPlotter new on: list.
-	self assert: bp lastQuartile equals: 100.
+	self assert: bp firstQuartile equals: 4.
 
 ]
 
@@ -43,6 +33,16 @@ MiroBoxploterTest >> testInterquartileRange [
 	bp := MiroBoxPlotter new on: list.
 	self assert: (bp lastQuartile - bp firstQuartile) equals: 100
 	
+
+]
+
+{ #category : #tests }
+MiroBoxploterTest >> testLastQuartile [
+
+	| list bp |
+	list := MiroListOfSingleValues new data: #(0 0 0 50 100 100 100).
+	bp := MiroBoxPlotter new on: list.
+	self assert: bp lastQuartile equals: 100.
 
 ]
 
