@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'list'
 	],
-	#category : #'BCDash-Plotter'
+	#category : #'Miro-Plotter'
 }
 
 { #category : #api }

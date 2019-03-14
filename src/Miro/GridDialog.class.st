@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerId'
 	],
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #accessing }

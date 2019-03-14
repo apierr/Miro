@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfBCDash,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfBCDash
+	#category : #BaselineOfMiro
 }
 
 { #category : #baselines }
@@ -14,6 +14,6 @@ BaselineOfBCDash >> baseline: spec [
 			spec baseline: 'MaterialDesignLite' with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ] .
 			spec baseline: 'ChartJs' with: [ spec repository: 'github://DuneSt/ChartJs:v1.x.x/src' ].
 			spec package: #Miro with: [ spec requires: #('Seaside3' 'MaterialDesignLite' 'ChartJs') ].
-			spec package: #BCDashTest with: [ spec requires: #(#Miro)]
+			spec package: #MiroTest with: [ spec requires: #(#Miro)]
 			 ]
 ]

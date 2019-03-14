@@ -1,7 +1,7 @@
 Class {
 	#name : #BulletPlot,
 	#superclass : #MiroPlot,
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #'as yet unclassified' }

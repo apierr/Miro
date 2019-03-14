@@ -5,7 +5,7 @@ Class {
 		'count',
 		'containerId'
 	],
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #accessing }

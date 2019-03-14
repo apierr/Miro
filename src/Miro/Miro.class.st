@@ -1,7 +1,7 @@
 Class {
 	#name : #Miro,
 	#superclass : #Component,
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #'class initialization' }

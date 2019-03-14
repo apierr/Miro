@@ -1,7 +1,7 @@
 Class {
 	#name : #BarPlot,
 	#superclass : #MiroPlot,
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #rendering }

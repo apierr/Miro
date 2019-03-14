@@ -5,7 +5,7 @@ Class {
 		'data',
 		'labels'
 	],
-	#category : #'BCDash-Data'
+	#category : #'Miro-Data'
 }
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MiroPlot,
 	#superclass : #ComponentPage,
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #accessing }
