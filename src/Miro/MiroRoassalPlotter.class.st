@@ -7,5 +7,13 @@ Class {
 { #category : #plotting }
 MiroRoassalPlotter >> plot: aMiroPlot [
 
-	^ aMiroPlot plotOnRoassal
+	| view filename exporter |
+	view := aMiroPlot plotOnRoassal.
+	
+	filename := 'temp.png'.
+	exporter := RTPNGExporter new.
+	exporter builder: view.
+	exporter fileName: filename asFileReference fullName.
+	exporter exportToFile.
+	^ MiroSeasideImageComponent on: filename asFileReference
 ]
