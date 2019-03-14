@@ -5,7 +5,7 @@ Class {
 		'count',
 		'containerId'
 	],
-	#category : #'Miro-Core'
+	#category : #Miro
 }
 
 { #category : #accessing }

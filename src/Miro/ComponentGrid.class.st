@@ -1,7 +1,7 @@
 Class {
 	#name : #ComponentGrid,
 	#superclass : #ComponentPage,
-	#category : #'Miro-Core'
+	#category : #Miro
 }
 
 { #category : #rendering }

@@ -1,6 +1,6 @@
 Class {
 	#name : #Miro,
-	#superclass : #Component,
+	#superclass : #AnObsoleteComponent,
 	#category : #'Miro-Core'
 }
 

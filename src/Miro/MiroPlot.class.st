@@ -1,6 +1,6 @@
 Class {
 	#name : #MiroPlot,
-	#superclass : #ComponentPage,
+	#superclass : #AnObsoleteComponentPage,
 	#category : #'Miro-Core'
 }
 
