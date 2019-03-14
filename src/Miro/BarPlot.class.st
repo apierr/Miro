@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #rendering }
-BarPlot >> renderContentOn: html [
+BarPlot >> plotOnChartJs [
 	|chartData|
 	chartData := (Chart2dData
 		xObjects: {'bar' . 'foo' . 'cla'  }
@@ -13,5 +13,5 @@ BarPlot >> renderContentOn: html [
 		multiValueTooltip: '<label> spent <value> min in <key>';
 		chartType: ChartBar;
 		yourself.
-	html render: (ChartJsComponent data: chartData)
+	^ (ChartJsComponent data: chartData)
 ]

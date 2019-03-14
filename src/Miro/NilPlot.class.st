@@ -16,5 +16,6 @@ NilPlot class >> priority [
 
 { #category : #rendering }
 NilPlot >> renderContentOn: html [
-	''
+	
+	"Do nothing"
 ]

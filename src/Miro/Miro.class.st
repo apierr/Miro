@@ -1,6 +1,6 @@
 Class {
 	#name : #Miro,
-	#superclass : #AnObsoleteComponent,
+	#superclass : #Component,
 	#category : #'Miro-Core'
 }
 
@@ -16,12 +16,6 @@ Miro class >> initializeAs: aString [
 		addLibrary: MDLLibrary;
 		addLibrary: ChartJsLibrary;
 		yourself
-]
-
-{ #category : #initialization }
-Miro >> initialize [
-	super initialize.
-
 ]
 
 { #category : #rendering }

@@ -4,10 +4,10 @@ Class {
 	#category : #'Miro-Core'
 }
 
-{ #category : #rendering }
-BoxPlot >> renderContentOn: html [
-	html render: (self view: #(1 4 4 4 5 5 5 8)).
+{ #category : #accessing }
+BoxPlot >> plotOnChartJs [
 
+	^ self view: #(1 4 4 4 5 5 5 8)
 ]
 
 { #category : #accessing }

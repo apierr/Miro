@@ -1,6 +1,9 @@
 Class {
 	#name : #MiroPlot,
-	#superclass : #AnObsoleteComponentPage,
+	#superclass : #Miro,
+	#instVars : [
+		'plotter'
+	],
 	#category : #'Miro-Core'
 }
 
@@ -17,4 +20,27 @@ MiroPlot class >> displayName [
 { #category : #accessing }
 MiroPlot class >> priority [
 	^ 1
+]
+
+{ #category : #initialization }
+MiroPlot >> initialize [
+	super initialize.
+	plotter := MiroChartJSPlotter new
+]
+
+{ #category : #rendering }
+MiroPlot >> plot [
+
+	^ plotter plot: self
+]
+
+{ #category : #rendering }
+MiroPlot >> plotOnChartJs [
+
+	self subclassResponsibility
+]
+
+{ #category : #rendering }
+MiroPlot >> renderContentOn: html [
+	html render: self plot
 ]
