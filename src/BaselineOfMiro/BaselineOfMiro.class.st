@@ -1,11 +1,11 @@
 Class {
-	#name : #BaselineOfBCDash,
+	#name : #BaselineOfMiro,
 	#superclass : #BaselineOf,
 	#category : #BaselineOfMiro
 }
 
 { #category : #baselines }
-BaselineOfBCDash >> baseline: spec [
+BaselineOfMiro >> baseline: spec [
 	<baseline>
 	spec
 		for: #common

@@ -2,7 +2,7 @@
 Baseline of BCDash
 "
 Class {
-	#name : #ManifestBaselineOfBCDash,
+	#name : #ManifestBaselineOfMiro,
 	#superclass : #PackageManifest,
 	#category : #'BaselineOfMiro-Manifest'
 }
