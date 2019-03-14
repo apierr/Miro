@@ -1,20 +1,20 @@
 Class {
-	#name : #Reports,
+	#name : #MiroPlot,
 	#superclass : #ComponentPage,
-	#category : #'BCDash-Core'
+	#category : #'Miro-Core'
 }
 
 { #category : #accessing }
-Reports class >> allReportKinds [
+MiroPlot class >> allReportKinds [
 	^ self allSubclasses sorted: #priority ascending
 ]
 
 { #category : #accessing }
-Reports class >> displayName [
-	^ self asString allButFirst: 6
+MiroPlot class >> displayName [
+	^ self asString allButLast: 4
 ]
 
 { #category : #accessing }
-Reports class >> priority [
+MiroPlot class >> priority [
 	^ 1
 ]

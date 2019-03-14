@@ -1,11 +1,11 @@
 Class {
-	#name : #ReportBar,
-	#superclass : #Reports,
-	#category : #'BCDash-Core'
+	#name : #BarPlot,
+	#superclass : #MiroPlot,
+	#category : #'Miro-Core'
 }
 
 { #category : #rendering }
-ReportBar >> renderContentOn: html [
+BarPlot >> renderContentOn: html [
 	|chartData|
 	chartData := (Chart2dData
 		xObjects: {'bar' . 'foo' . 'cla'  }

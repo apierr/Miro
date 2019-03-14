@@ -1,16 +1,16 @@
 Class {
-	#name : #ReportTreemaps,
-	#superclass : #Reports,
-	#category : #'BCDash-Core'
+	#name : #TreemapPlot,
+	#superclass : #MiroPlot,
+	#category : #'Miro-Core'
 }
 
 { #category : #'as yet unclassified' }
-ReportTreemaps >> imageUrl [
+TreemapPlot >> imageUrl [
 	^'https://empleatron.github.io/media/blog/images/demanda_laboral_mini.png'
 ]
 
 { #category : #rendering }
-ReportTreemaps >> renderContentOn: html [
+TreemapPlot >> renderContentOn: html [
 	html image
 		url: self imageUrl;
 		width: '250'

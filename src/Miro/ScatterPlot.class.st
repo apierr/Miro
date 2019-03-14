@@ -1,16 +1,16 @@
 Class {
-	#name : #ReportScatter,
-	#superclass : #Reports,
-	#category : #'BCDash-Core'
+	#name : #ScatterPlot,
+	#superclass : #MiroPlot,
+	#category : #'Miro-Core'
 }
 
 { #category : #'as yet unclassified' }
-ReportScatter >> imageUrl [
+ScatterPlot >> imageUrl [
 	^'https://i.stack.imgur.com/tWwdR.png'
 ]
 
 { #category : #rendering }
-ReportScatter >> renderContentOn: html [
+ScatterPlot >> renderContentOn: html [
 	html image
 		url: self imageUrl;
 		width: '250'
