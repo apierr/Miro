@@ -10,6 +10,24 @@ BoxPlot >> plotOnChartJs [
 	^ self view: #(1 4 4 4 5 5 5 8)
 ]
 
+{ #category : #plotting }
+BoxPlot >> plotOnRoassal [
+	| exporter b ds filename |
+	b := RTGrapher new.
+	b extent: 100 @ 300.
+	ds := RTBoxPlotDataSet new.
+	ds points: #(1 4 4 4 5 5 5 9).
+	b add: ds.
+	b build.
+	
+	filename := 'temp.png'.
+	exporter := RTPNGExporter new.
+	exporter builder: b build.
+	exporter fileName: filename asFileReference fullName.
+	exporter exportToFile.
+	^ MiroSeasideImageComponent on: filename asFileReference
+]
+
 { #category : #accessing }
 BoxPlot >> view: dataList [
 	| chartData list bp|

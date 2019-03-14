@@ -15,3 +15,10 @@ RadarPlot >> renderContentOn: html [
 		url: self imageUrl;
 		width: '250'
 ]
+
+{ #category : #rendering }
+RadarPlot >> renderOn: html [
+	html image
+		url: self imageUrl;
+		width: '250'
+]

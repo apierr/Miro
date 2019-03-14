@@ -25,7 +25,8 @@ MiroPlot class >> priority [
 { #category : #initialization }
 MiroPlot >> initialize [
 	super initialize.
-	plotter := MiroChartJSPlotter new
+	
+	self useChartJS
 ]
 
 { #category : #rendering }
@@ -40,7 +41,23 @@ MiroPlot >> plotOnChartJs [
 	self subclassResponsibility
 ]
 
+{ #category : #plotting }
+MiroPlot >> plotOnRoassal [
+	
+	self subclassResponsibility
+]
+
 { #category : #rendering }
 MiroPlot >> renderContentOn: html [
 	html render: self plot
+]
+
+{ #category : #initialization }
+MiroPlot >> useChartJS [
+	plotter := MiroChartJSPlotter new
+]
+
+{ #category : #initialization }
+MiroPlot >> useRoassal [
+	plotter := MiroRoassalPlotter new
 ]

@@ -1,11 +1,11 @@
 Class {
-	#name : #MiroChartJSPlotter,
+	#name : #MiroRoassalPlotter,
 	#superclass : #Object,
 	#category : #'Miro-PlottingStrategies'
 }
 
 { #category : #plotting }
-MiroChartJSPlotter >> plot: aMiroPlot [
+MiroRoassalPlotter >> plot: aMiroPlot [
 
-	^ aMiroPlot plotOnChartJs
+	^ aMiroPlot plotOnRoassal
 ]
