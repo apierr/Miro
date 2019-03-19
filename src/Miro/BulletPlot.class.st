@@ -10,8 +10,20 @@ BulletPlot >> imageUrl [
 ]
 
 { #category : #rendering }
+BulletPlot >> plotOnRoassal [
+
+	| view |
+	view := RTView new.
+	view add: (RTBitmap new
+		form: (Form fromBinaryStream: (
+			(ZnEasy get: self imageUrl)
+				contents readStream));
+		yourself) element.
+	^ view
+]
+
+{ #category : #rendering }
 BulletPlot >> renderContentOn: html [
-	html image
-		url: self imageUrl;
-		width: '250'
+	
+	super renderContentOn: html.
 ]
