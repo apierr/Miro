@@ -13,7 +13,7 @@ BoxPlot >> initialize [
 	data := #(1 4 4 4 5 5 5 8)
 ]
 
-{ #category : #accessing }
+{ #category : #plotting }
 BoxPlot >> plotOnChartJs [
 	| chartData list bp |
 	list := MiroListOfSingleValues new data: data.
