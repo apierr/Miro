@@ -35,7 +35,7 @@ MiroPlot >> plot [
 	^ plotter plot: self
 ]
 
-{ #category : #rendering }
+{ #category : #plotting }
 MiroPlot >> plotOnChartJs [
 
 	self subclassResponsibility
