@@ -2,7 +2,6 @@ Class {
 	#name : #GridGraphList,
 	#superclass : #ComponentGrid,
 	#instVars : [
-		'count',
 		'containerId'
 	],
 	#category : #Miro
@@ -12,12 +11,6 @@ Class {
 GridGraphList class >> containerId: id [
 	^ self new containerId: id;
 	yourself 
-]
-
-{ #category : #'as yet unclassified' }
-GridGraphList >> anchorClicked [
-	"comment stating purpose of message"
-	count := count + 1
 ]
 
 { #category : #accessing }
@@ -30,29 +23,9 @@ GridGraphList >> containerId: anObject [
 	containerId := anObject
 ]
 
-{ #category : #accessing }
-GridGraphList >> count [
-	^ count
-]
-
-{ #category : #accessing }
-GridGraphList >> count: anObject [
-	count := anObject
-]
-
 { #category : #'as yet unclassified' }
 GridGraphList >> initialize [
     super initialize.
-    count := 0.
-]
-
-{ #category : #'as yet unclassified' }
-GridGraphList >> loadCounter: html [
-	^(html jQuery id: html lastId) load
-                html: [ :renderer | 
-                    self anchorClicked .
-                    self renderCounterOn: html ];
-                onComplete: 'componentHandler.upgradeDom()'
 ]
 
 { #category : #'as yet unclassified' }
@@ -91,12 +64,6 @@ GridGraphList >> renderContentOn: html [
 		with: self containerId.
   
 
-]
-
-{ #category : #rendering }
-GridGraphList >> renderCounterOn: html [
-	"comment stating purpose of message"
-	html heading: count
 ]
 
 { #category : #rendering }
