@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerId'
 	],
-	#category : #Miro
+	#category : #'Miro-SeasideComponents'
 }
 
 { #category : #rendering }

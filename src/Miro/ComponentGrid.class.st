@@ -1,7 +1,7 @@
 Class {
 	#name : #ComponentGrid,
 	#superclass : #ComponentPage,
-	#category : #Miro
+	#category : #'Miro-SeasideComponents'
 }
 
 { #category : #rendering }
