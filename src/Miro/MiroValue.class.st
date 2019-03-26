@@ -7,6 +7,13 @@ Class {
 	#category : #'Miro-Data'
 }
 
+{ #category : #accessing }
+MiroValue class >> value: aMiroValue [
+	^ self new value:  aMiroValue;
+	yourself 
+
+]
+
 { #category : #testing }
 MiroValue >> isLabel [
 	^ (self value isNumber) not

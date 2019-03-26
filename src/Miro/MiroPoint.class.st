@@ -7,6 +7,13 @@ Class {
 	#category : #'Miro-Data'
 }
 
+{ #category : #initialization }
+MiroPoint >> addValue: aMiroValue [
+	values  add: aMiroValue.
+	^aMiroValue
+
+]
+
 { #category : #accessing }
 MiroPoint >> dimension [
 	"Dimension of a point"
