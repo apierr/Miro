@@ -1,6 +1,6 @@
 Class {
 	#name : #MiroListOfPoints,
-	#superclass : #Object,
+	#superclass : #MiroData,
 	#instVars : [
 		'points'
 	],

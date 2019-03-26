@@ -1,6 +1,6 @@
 Class {
 	#name : #MiroValue,
-	#superclass : #Object,
+	#superclass : #MiroData,
 	#instVars : [
 		'value'
 	],
