@@ -33,6 +33,6 @@ MiroPoint >> values [
 ]
 
 { #category : #accessing }
-MiroPoint >> values: anObject [
-	values := anObject
+MiroPoint >> values: aCollection [
+	values := aCollection
 ]

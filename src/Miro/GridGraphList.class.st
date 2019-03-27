@@ -73,6 +73,6 @@ GridGraphList >> renderObjectOn: html graph: aGraphId [
 	| miroPlot |
 	miroPlot := (MiroPlot allReportKinds
 		detect: [ :report | report displayName = aGraphId ]) new.
-	miroPlot useRoassal.
+	miroPlot useChartJS.
 	html render: miroPlot
 ]
