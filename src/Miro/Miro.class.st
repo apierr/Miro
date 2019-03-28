@@ -6,7 +6,7 @@ Class {
 
 { #category : #'class initialization' }
 Miro class >> initialize [
-	^ self initializeAs: 'bcdash'
+	^ self initializeAs: 'miro'
 ]
 
 { #category : #initialization }
