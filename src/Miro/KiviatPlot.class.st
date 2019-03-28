@@ -2,7 +2,8 @@ Class {
 	#name : #KiviatPlot,
 	#superclass : #MiroPlot,
 	#instVars : [
-		'data'
+		'data',
+		'labels'
 	],
 	#category : #'Miro-Core'
 }
@@ -10,15 +11,16 @@ Class {
 { #category : #accesing }
 KiviatPlot >> initialize [
 	super initialize.
-	data := #(1 4 4 4 5 5 5 8)
+	data := {('2017' -> {65. 59. 90. 81. 56. 55. 40  }). ('2018' -> { 28. 48. 40. 19. 96. 27. 100 })}.
+	labels := {'NF' . 'NM' . 'NP' . 'NRq' . 'NRv' . 'NSCL'. 'McCC' }
 ]
 
 { #category : #plotting }
 KiviatPlot >> plotOnChartJs [
 	|chartData|
 	chartData := (Chart2dData
-		xObjects: {'bar' . 'foo' . 'cla' . 'sad' . 'qwe' . 'zxc'. 'hjk' }
-		multiYObjects: {('A' -> {65. 59. 90. 81. 56. 55. 40  }). ('B' -> { 28. 48. 40. 19. 96. 27. 100 })})
+		xObjects: labels 
+		multiYObjects: data)
 		multiValueTooltip: '<label> spent <value> min in <key>';
 		chartType: ChartRadar;
 		yourself.
