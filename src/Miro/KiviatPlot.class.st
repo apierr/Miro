@@ -31,8 +31,8 @@ KiviatPlot >> plotOnChartJs [
 KiviatPlot >> plotOnRoassal [
 	| b |
 	b := RTKiviatBuilder new.
-	b objects: (Array with: '-' -> data).
-	data doWithIndex: [ :each :i | b addMetric: each title: i asString, '_label' ].
+	b objects: data.
+	labels asArray doWithIndex: [ :each :i | b addMetric: [ :e | e value at: i ] title: each ].
 	b activateAxisTitle.
 	b activatePolygons.
 	b build.
