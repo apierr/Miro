@@ -7,6 +7,12 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+BoxPlot class >> acceptedInputs [
+
+	^ { '1V' }
+]
+
 { #category : #accessing }
 BoxPlot >> initialize [
 	super initialize.

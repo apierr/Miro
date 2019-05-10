@@ -7,6 +7,11 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+LinePlot class >> acceptedInputs [
+	^ { '2D order' }
+]
+
 { #category : #accessing }
 LinePlot >> initialize [
 	super initialize.
