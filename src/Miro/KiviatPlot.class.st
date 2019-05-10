@@ -10,9 +10,12 @@ Class {
 
 { #category : #accesing }
 KiviatPlot >> initialize [
+	| mt|
 	super initialize.
-	data := {('2017' -> {65. 59. 90. 81. 56. 55. 40  }). ('2018' -> { 28. 48. 40. 19. 96. 27. 100 })}.
-	labels := {'NF' . 'NM' . 'NP' . 'NRq' . 'NRv' . 'NSCL'. 'McCC' }
+	mt := MiroTransformer new.
+	mt groupBy: 1.
+	labels := mt labels.
+	data := mt data.
 ]
 
 { #category : #plotting }
