@@ -7,6 +7,12 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+MiroPlot class >> acceptedInputs [
+
+	^ { } 
+]
+
 { #category : #accessing }
 MiroPlot class >> allReportKinds [
 	^ self allSubclasses sorted: #priority ascending

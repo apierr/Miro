@@ -10,9 +10,12 @@ Class {
 
 { #category : #accesing }
 KiviatPlot >> initialize [
+	| mt|
 	super initialize.
-	data := {('2017' -> {65. 59. 90. 81. 56. 55. 40  }). ('2018' -> { 28. 48. 40. 19. 96. 27. 100 })}.
-	labels := {'NF' . 'NM' . 'NP' . 'NRq' . 'NRv' . 'NSCL'. 'McCC' }
+	mt := MiroTransformer new.
+	mt groupBy: 2.
+	labels := mt labels.
+	data := mt data.
 ]
 
 { #category : #plotting }
@@ -30,9 +33,10 @@ KiviatPlot >> plotOnChartJs [
 { #category : #plotting }
 KiviatPlot >> plotOnRoassal [
 	| b |
+	labels := labels asArray .
 	b := RTKiviatBuilder new.
-	b objects: data.
-	labels asArray doWithIndex: [ :each :i | b addMetric: [ :e | e value at: i ] title: each ].
+	b objects: (Array with: '-' -> (data at:1) treeNodeTail ).
+	labels doWithIndex: [ :each :i | b addMetric: each title: i asString, '_label' ].
 	b activateAxisTitle.
 	b activatePolygons.
 	b build.

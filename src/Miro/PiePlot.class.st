@@ -7,6 +7,12 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+PiePlot class >> acceptedInputs [
+
+	^  { '1D 1V' . '1D' } 
+]
+
 { #category : #accesing }
 PiePlot >> initialize [
 	super initialize.
