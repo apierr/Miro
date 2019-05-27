@@ -13,7 +13,7 @@ KiviatPlot >> initialize [
 	| mt|
 	super initialize.
 	mt := MiroTransformer new.
-	mt groupBy: 1.
+	mt groupBy: 2.
 	labels := mt labels.
 	data := mt data.
 ]
