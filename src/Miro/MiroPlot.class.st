@@ -4,13 +4,31 @@ Class {
 	#instVars : [
 		'plotter'
 	],
+	#classInstVars : [
+		'list'
+	],
 	#category : #'Miro-Core'
 }
+
+{ #category : #'as yet unclassified' }
+MiroPlot class >> acceptedDataFrame [
+
+	^ { } 
+]
 
 { #category : #'as yet unclassified' }
 MiroPlot class >> acceptedInputs [
 
 	^ { } 
+]
+
+{ #category : #accessing }
+MiroPlot class >> allPlottingClasses [
+	list := OrderedCollection new.
+	MiroPlot
+		allSubclassesWithLevelDo: [ :c :l | list add: c ]
+		startingLevel: 2.
+	^ list
 ]
 
 { #category : #accessing }
