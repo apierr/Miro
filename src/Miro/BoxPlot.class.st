@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+BoxPlot class >> acceptedDataFrame [
+	
+	^ { 'N+3P'. 'N+4P' } 
+]
+
+{ #category : #'as yet unclassified' }
 BoxPlot class >> acceptedInputs [
 
 	^ { '1V' }
