@@ -16,6 +16,6 @@ BaselineOfMiro >> baseline: spec [
 			spec baseline: 'Roassal2' with: [ spec repository: 'github://ObjectProfile/Roassal2/src' ].
 			spec baseline: 'NeoCSV' with: [ spec repository: 'github://svenvc/NeoCSV/repository' ].
 			spec package: #Miro with: [ spec requires: #('Seaside3' 'MaterialDesignLite' 'ChartJs' 'Roassal2') ].
-			spec package: #MiroTest with: [ spec requires: #(#Miro)]
+			spec package: #'Miro-Tests' with: [ spec requires: #(#Miro)]
 			 ]
 ]

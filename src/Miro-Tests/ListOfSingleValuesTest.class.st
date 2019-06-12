@@ -1,7 +1,7 @@
 Class {
 	#name : #ListOfSingleValuesTest,
 	#superclass : #TestCase,
-	#category : #'MiroTest-Data'
+	#category : #'Miro-Tests-Data'
 }
 
 { #category : #tests }

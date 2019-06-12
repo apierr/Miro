@@ -1,7 +1,7 @@
 Class {
 	#name : #MiroBoxploterTest,
 	#superclass : #TestCase,
-	#category : #'MiroTest-Plotter'
+	#category : #'Miro-Tests-Plotter'
 }
 
 { #category : #tests }
