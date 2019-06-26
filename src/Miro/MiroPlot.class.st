@@ -41,6 +41,13 @@ MiroPlot class >> displayName [
 	^ self asString allButLast: 4
 ]
 
+{ #category : #'as yet unclassified' }
+MiroPlot class >> plotsFor: aString [
+	^ self allSubclasses
+		select:
+			[ :each | each acceptedDataFrame anySatisfy: [ :in | aString match: in ] ]
+]
+
 { #category : #accessing }
 MiroPlot class >> priority [
 	^ 1

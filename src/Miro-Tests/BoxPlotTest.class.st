@@ -3,21 +3,21 @@ A BoxPlotTest is a test class for testing the behavior of BoxPlot
 "
 Class {
 	#name : #BoxPlotTest,
-	#superclass : #TestCase,
+	#superclass : #MiroPlotTest,
 	#category : #'Miro-Tests-Core'
 }
 
-{ #category : #test }
-BoxPlotTest >> testAcceptedDataFrame [
-	| a |
-	
-	a := MiroPlot allSubclasses
-		select:
-			[ :each | each acceptedDataFrame anySatisfy: [ :in | 'N+4P' match: in ] ].
-	self assert: (a includes: BoxPlot) equals: true.
+{ #category : #accessing }
+BoxPlotTest >> actualClass [
+	^ BoxPlot
+]
 
-	a := MiroPlot allSubclasses
-		select:
-			[ :each | each acceptedDataFrame anySatisfy: [ :in | 'N+5P' match: in ] ].
-	self assert: (a includes: BoxPlot) equals: false
+{ #category : #accessing }
+BoxPlotTest >> matchingDataFrame [
+	^ 'N+4P'
+]
+
+{ #category : #accessing }
+BoxPlotTest >> notMatchingDataFrame [
+	^ 'N+5P'
 ]
