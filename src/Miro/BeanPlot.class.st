@@ -9,3 +9,9 @@ BeanPlot class >> acceptedDataFrame [
 	
 	^ { 'N+4P'. 'N+5P' } 
 ]
+
+{ #category : #'as yet unclassified' }
+BeanPlot >> acceptedDataFrame [
+	
+	^ { 'N+4P'. 'N+5P' } 
+]
