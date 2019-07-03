@@ -4,13 +4,31 @@ Class {
 	#instVars : [
 		'plotter'
 	],
+	#classInstVars : [
+		'list'
+	],
 	#category : #'Miro-Core'
 }
+
+{ #category : #'as yet unclassified' }
+MiroPlot class >> acceptedDataFrame [
+
+	^ { } 
+]
 
 { #category : #'as yet unclassified' }
 MiroPlot class >> acceptedInputs [
 
 	^ { } 
+]
+
+{ #category : #accessing }
+MiroPlot class >> allPlottingClasses [
+	list := OrderedCollection new.
+	MiroPlot
+		allSubclassesWithLevelDo: [ :c :l | list add: c ]
+		startingLevel: 2.
+	^ list
 ]
 
 { #category : #accessing }
@@ -21,6 +39,13 @@ MiroPlot class >> allReportKinds [
 { #category : #accessing }
 MiroPlot class >> displayName [
 	^ self asString allButLast: 4
+]
+
+{ #category : #'as yet unclassified' }
+MiroPlot class >> plotsFor: aString [
+	^ self allSubclasses
+		select:
+			[ :each | each acceptedDataFrame anySatisfy: [ :in | aString match: in ] ]
 ]
 
 { #category : #accessing }
