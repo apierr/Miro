@@ -12,8 +12,8 @@ BaselineOfMiro >> baseline: spec [
 		do: [ spec
 				baseline: 'Seaside3'
 				with: [ spec
-						repository: 'github://SeasideSt/Seaside/repository'
-						loads: #('REST') ].
+						repository: 'github://SeasideSt/Seaside/repository';
+						loads: #('REST' 'Seaside') ].
 			spec
 				baseline: 'MaterialDesignLite'
 				with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ].
