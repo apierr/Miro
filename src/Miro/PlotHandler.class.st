@@ -11,12 +11,15 @@ PlotHandler class >> initialize [
 
 { #category : #accessing }
 PlotHandler >> acceptedDataFrame: aString [
-	" example http://localhost:8080/miro-api/acceptedDataFrame/BoxPlot"
+	" example http://localhost:8080/miro-api/acceptedDataFrame/Box"
 
 	<get>
 	<produces: 'text/json'>
 	<path: '/acceptedDataFrame/{aString}'>
-	^ aString asClass acceptedDataFrame asJavascript
+	^ [ (MiroPlot named: aString) acceptedDataFrame asJavascript ]
+		on: NotFound
+		do: [ 'Error got ' , aString , ' but was expecting on of those: '
+				, (MiroPlot allReportKinds collect: #displayName) asString ]
 ]
 
 { #category : #accessing }
