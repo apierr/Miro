@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+BulletPlot class >> acceptedDataFrame [
+	
+	^ { 'N+P' } 
+]
+
+{ #category : #'as yet unclassified' }
 BulletPlot >> imageUrl [
 	^'https://static.infragistics.com/marketing/Website/products/wpf/control-images/gauges/bullet-graph/wpf-bulletgraph-configurable-orientation-and-direction-l.png?v=201805100900'
 ]
