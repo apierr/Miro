@@ -8,6 +8,12 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+KiviatPlot class >> acceptedDataFrame [
+	
+	^ { '2N+P'. '3N+P'. '4N+P' } 
+]
+
 { #category : #accesing }
 KiviatPlot >> initialize [
 	| mt|

@@ -25,7 +25,7 @@ MiroPlot class >> acceptedInputs [
 { #category : #accessing }
 MiroPlot class >> allPlottingClasses [
 	list := OrderedCollection new.
-	MiroPlot
+	self
 		allSubclassesWithLevelDo: [ :c :l | list add: c ]
 		startingLevel: 2.
 	^ list
@@ -39,6 +39,12 @@ MiroPlot class >> allReportKinds [
 { #category : #accessing }
 MiroPlot class >> displayName [
 	^ self asString allButLast: 4
+]
+
+{ #category : #accessing }
+MiroPlot class >> named: aDisplayName [
+	^ self allReportKinds
+		detect: [ :class | class name = aDisplayName ]
 ]
 
 { #category : #'as yet unclassified' }

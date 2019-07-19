@@ -10,7 +10,7 @@ Class {
 { #category : #'as yet unclassified' }
 BoxPlot class >> acceptedDataFrame [
 	
-	^ { 'N+3P'. 'N+4P' } 
+	^ { 'N+3P'. 'N+4P'. '1N+1C+4P'. '2N+4P' } 
 ]
 
 { #category : #'as yet unclassified' }

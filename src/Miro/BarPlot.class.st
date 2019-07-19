@@ -7,6 +7,12 @@ Class {
 	#category : #'Miro-Core'
 }
 
+{ #category : #'as yet unclassified' }
+BarPlot class >> acceptedDataFrame [
+	
+	^ { '1N+1C+2P' } 
+]
+
 { #category : #accesing }
 BarPlot >> initialize [
 	super initialize.

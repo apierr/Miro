@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+LinePlot class >> acceptedDataFrame [
+	
+	^ { '1N+1D+2P' } 
+]
+
+{ #category : #'as yet unclassified' }
 LinePlot class >> acceptedInputs [
 	^ { '2D order' }
 ]
