@@ -10,7 +10,7 @@ Class {
 { #category : #'as yet unclassified' }
 LinePlot class >> acceptedDataFrame [
 	
-	^ { '1N+1D+2P' } 
+	^ { '1N+1D+2P' . '1N+1D+3P' . '1N+1D+4P'. '6N+1D+4P'} 
 ]
 
 { #category : #'as yet unclassified' }
