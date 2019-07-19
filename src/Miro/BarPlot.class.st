@@ -10,7 +10,7 @@ Class {
 { #category : #'as yet unclassified' }
 BarPlot class >> acceptedDataFrame [
 	
-	^ { 'N+P' } 
+	^ { '1N+1C+2P' } 
 ]
 
 { #category : #accesing }

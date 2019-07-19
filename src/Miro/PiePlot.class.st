@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+PiePlot class >> acceptedDataFrame [
+	
+	^ { '1N+1C+1P' } 
+]
+
+{ #category : #'as yet unclassified' }
 PiePlot class >> acceptedInputs [
 
 	^  { '1D 1V' . '1D' } 

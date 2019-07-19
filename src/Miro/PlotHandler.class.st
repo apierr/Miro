@@ -14,7 +14,6 @@ PlotHandler >> acceptedDataFrame: aString [
 	" example http://localhost:8080/miro-api/acceptedDataFrame/Box"
 
 	<get>
-	<produces: 'text/json'>
 	<path: '/acceptedDataFrame/{aString}'>
 	^ [ (MiroPlot named: aString) acceptedDataFrame asJavascript ]
 		on: NotFound
@@ -27,7 +26,6 @@ PlotHandler >> acceptedPlot: aString [
 	" example http://localhost:8080/miro-api/acceptedPlot/N%2B4P"
 
 	<get>
-	<produces: 'text/json'>
 	<path: '/acceptedPlot/{aString}'>
 	^ (MiroPlot plotsFor: aString) asJavascript
 ]
